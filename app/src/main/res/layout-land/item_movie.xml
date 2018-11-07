@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="movie" type="com.example.maikbiskup.moviefinder.model.data_model.Movie" />
+    </data>
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/card_view_movie"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/primaryColorOpaque30">
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <ImageView
+                    android:id="@+id/viewholder_img"
+                    android:contentDescription="@string/img_header_desc"
+                    android:src="@mipmap/ic_launcher_foreground"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/img_land_width"
+                    android:layout_height="@dimen/img_land_height"/>
+
+            <include layout="@layout/seperator"/>
+
+            <TextView
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:id="@+id/viewholder_title"
+                    android:text="@{movie.Title}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</layout>

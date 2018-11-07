@@ -1,0 +1,16 @@
+<resources>
+    <dimen name="text_header">24sp</dimen>
+    <dimen name="text_edit">20sp</dimen>
+    <dimen name="text_normal">18sp</dimen>
+
+    <dimen name="et_width">200dp</dimen>
+
+    <!-- Images -->
+    <dimen name="img_horizontal_width">200dp</dimen>
+    <dimen name="img_horizontal_height">200dp</dimen>
+    <dimen name="img_land_width">140dp</dimen>
+    <dimen name="img_land_height">140dp</dimen>
+
+    <dimen name="divider_height">2dp</dimen>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="viewModel" type="com.example.maikbiskup.moviefinder.viewmodel.MovieViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.activity.DetailedSearchResult">
+
+
+        <TextView
+                android:textColor="@color/primaryTextColor"
+                android:text="@{viewModel.getTitle()}"
+                android:textSize="@dimen/text_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_header_title_detailed" tools:text="Title"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+
+
+        <ImageView
+                android:layout_width="@dimen/img_horizontal_width"
+                android:layout_height="@dimen/img_horizontal_height"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/img_header"
+                android:contentDescription="@string/img_header_desc"
+                app:layout_constraintTop_toBottomOf="@+id/tv_header_title_detailed" android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <RatingBar
+
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:scaleY="0.7"
+                android:scaleX="0.7"
+                android:id="@+id/tv_header_rating_detailed"
+                android:stepSize="0.5"
+                android:rating="@{viewModel.getRating()}"
+                android:numStars="5"
+                app:layout_constraintTop_toBottomOf="@id/img_header"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="227dp"/>
+
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:visibility="@{viewModel.getShowSpinner()}"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintBottom_toTopOf="parent"
+                     app:layout_constraintTop_toBottomOf="parent"/>
+
+
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="0dp"
+
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_header_rating_detailed"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="24dp"
+                    android:paddingStart="24dp"
+                    android:paddingTop="8dp" android:id="@+id/scrollView2">
+
+            <TextView
+                    android:textColor="@color/primaryTextColor"
+                    android:id="@+id/tv_description"
+                    android:text="@{viewModel.getDescription()}"
+                    android:textSize="@dimen/text_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

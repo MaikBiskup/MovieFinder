@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MovieFinder</string>
+    <string name="movie_title_hint">Movie title</string>
+    <string name="search_action">Search</string>
+    <string name="header_searchentries">Search results: %1$s</string>
+    <string name="entries">%1$s entries</string>
+    <string name="plot_header">Plot:</string>
+    <string name="actors_header">Actors:</string>
+    <string name="year_header">Year:</string>
+
+    <string name="img_header_desc">Film Poster</string>
+
+    //Toasts
+    <string name="onError">Something went wrong</string>
+    <string name="noResults">No results</string>
+    <string name="queryToShort">Input has to be at least 3 characters</string>
+</resources>
